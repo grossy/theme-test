@@ -15,6 +15,12 @@
 		font-size: 0.3em;
 		color: $primary-color;
 	}
+	@media (max-width: 780px) {
+		background:blue;
+	}
+	@media (max-width: 680px) {
+		background:red;
+	}
 }
 
 .entry_beige {
@@ -22,3 +28,15 @@
 	background: beige;
 }
 
+.blog {
+	> h1 { 
+		color: red; 
+		} 
+		/* only this heading, no child's child */
+	a {
+		color: red;
+		&:hover { /* affects only the parent, great for this hover styles */
+			color: blue;
+		}
+	}
+}

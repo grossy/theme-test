@@ -4,13 +4,54 @@
 @import "_variables.scss"; 
 @import "_mixins.scss"; 
 
+
 /* Global Styles */
 @import "_globals.scss"; 
+
 
 /* Page Specifics */
 @import "pages/_blog.scss"; 
 
 
+/* Responsive */
+@import "_responsive.scss"; 
 
 
 
+
+
+
+/* WORKING WITH IMAGE DIRECTORIES */
+
+@each $member1 in thom, jonny, colin, phil {
+	.bandmember.#{$member1} {
+		background: url("images/#{$member1}.jpg");
+	}
+}
+
+/* WORKING WITH IMAGE DIRECTORIES COMPLEX */
+
+@mixin band ($name, $members...) {
+	@each $member in $members {
+		.#{$name}.#{$member} {
+			background: url("images/#{$member}.jpg");
+		}
+	}
+}
+
+@include band (radiohead, thom, jonny, colin, phil );
+
+
+
+/* IF ORDER ISN'T CLEAR OR VERY COMPLEX */
+
+@mixin box ($size, $color, $display:block) {
+	width: $size;
+	height: $size;
+	background: $color;
+	display: $display;
+}
+
+.box {
+	@include box ($color: blue, $size: 10px)
+}

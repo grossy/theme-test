@@ -75,8 +75,60 @@ body {
   .entry .date, .entry_beige .date {
     font-size: 0.3em;
     color: #666666; }
+  @media (max-width: 780px) {
+    .entry, .entry_beige {
+      background: blue; } }
+  @media (max-width: 680px) {
+    .entry, .entry_beige {
+      background: red; } }
 
 .entry_beige {
   background: beige; }
+
+.blog {
+  /* only this heading, no child's child */ }
+  .blog > h1 {
+    color: red; }
+  .blog a {
+    color: red; }
+    .blog a:hover {
+      /* affects only the parent, great for this hover styles */
+      color: blue; }
+
+/* Responsive */
+/* darken (#333333, 20%); lighten (#333333, 20%); desaturate (#187, 50%); complement($background); mix(#369, #187); */
+/* placeholder never gets printed but can be include with: @extend %whatever; */
+/* WORKING WITH IMAGE DIRECTORIES */
+.bandmember.thom {
+  background: url("images/thom.jpg"); }
+
+.bandmember.jonny {
+  background: url("images/jonny.jpg"); }
+
+.bandmember.colin {
+  background: url("images/colin.jpg"); }
+
+.bandmember.phil {
+  background: url("images/phil.jpg"); }
+
+/* WORKING WITH IMAGE DIRECTORIES COMPLEX */
+.radiohead.thom {
+  background: url("images/thom.jpg"); }
+
+.radiohead.jonny {
+  background: url("images/jonny.jpg"); }
+
+.radiohead.colin {
+  background: url("images/colin.jpg"); }
+
+.radiohead.phil {
+  background: url("images/phil.jpg"); }
+
+/* IF ORDER ISN'T CLEAR OR VERY COMPLEX */
+.box {
+  width: 10px;
+  height: 10px;
+  background: blue;
+  display: block; }
 
 /*# sourceMappingURL=reference.css.map */
