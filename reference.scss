@@ -1,74 +1,16 @@
 
+/* Define colors, sizes, etc */
+@import "_reset.scss"; 
+@import "_variables.scss"; 
+@import "_mixins.scss"; 
 
-// --- SASS VARIABLES
+/* Global Styles */
+@import "_globals.scss"; 
 
-$primary-color: #666666;
-$secondary-color: #ff5500;
-$margin: 5px;
-$padding: $margin * 1.5;
-$borderslim: 1px #dedede solid;
-
-
-// --- SASS MIXINS (arguments & advanced logic)
-
-
-@mixin green_links {
-	a {
-		color:green;
-		&:hover {
-			color:blue;
-		}
-	}
-}
-
-@mixin roundy ($radius) {
-	border-radius: $radius;
-	border-top-right-radius: $radius*4;
-	border-bottom-left-radius: $radius*4;
-	// to use: @include flexy;
-}
-
-
-
-// --- SASS EXTENDING SELECTOR (literally copy stuff)
-
-%whatever {background: #999;}
-// placeholder never gets printed but can be include with: @extend %whatever;
+/* Page Specifics */
+@import "pages/_blog.scss"; 
 
 
 
 
 
-
-// STYLES
-
-body {
-	background: $primary-color;
-	font-family: Futura, "Trebuchet MS", sans-serif;
-	> h1 {
-		font-size: 3em;
-		color: #eee;
-		margin: $margin 0 0 $margin;
-	} 
-}
-
-.entry {
-	@include roundy (4px);
-	@include green_links;
-	background: white;
-	margin: $margin;
-	padding: $padding;
-	h1 {
-		font-size: 1.2em;
-		margin: 0px;
-	}
-	.date {
-		font-size: 0.3em;
-		color: $primary-color;
-	}
-}
-
-.entry_beige {
-	@extend .entry;
-	background: beige;
-}
