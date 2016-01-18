@@ -1,0 +1,30 @@
+body {
+  background: #666666;
+  font-family: Futura, "Trebuchet MS", sans-serif; }
+  body > h1 {
+    font-size: 3em;
+    color: #eee;
+    margin: 5px 0 0 5px; }
+
+.entry, .entry_beige {
+  border-radius: 4px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background: white;
+  margin: 5px;
+  padding: 7.5px; }
+  .entry a, .entry_beige a {
+    color: green; }
+    .entry a:hover, .entry_beige a:hover {
+      color: blue; }
+  .entry h1, .entry_beige h1 {
+    font-size: 1.2em;
+    margin: 0px; }
+  .entry .date, .entry_beige .date {
+    font-size: 0.3em;
+    color: #666666; }
+
+.entry_beige {
+  background: beige; }
+
+/*# sourceMappingURL=reference.css.map */
